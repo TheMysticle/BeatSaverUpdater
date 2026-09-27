@@ -11,8 +11,7 @@
         "BSIPA": "^4.3.4",
         "BeatSaberMarkupLanguage": "^1.12.0",
         "SongCore": "^3.14.12",
-        "SiraUtil": "^3.1.11",
-        "BeatSaverSharp": "^3.4.5"
+        "SiraUtil": "^3.1.11"
     },
     "links": {
         "project-source": "https://github.com/ibillingsley/BeatSaverUpdater"
