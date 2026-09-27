@@ -36,10 +36,9 @@ namespace BeatSaverUpdater
                 container.Bind<PopupModal>().AsSingle();
 
                 container.BindInterfacesTo<FavouritesMigrator>().AsSingle();
-                if (PlaylistsLibInstalled)
-                {
-                    container.BindInterfacesTo<PlaylistMigrator>().AsSingle();
-                }
+                // PlaylistMigrator (BeatSaberPlaylistsLib integration) is excluded from this
+                // build as of the 1.45.1 port -- see the comment on its Compile item in the
+                // csproj.
 
                 if (SongDetailsInstalled)
                 {

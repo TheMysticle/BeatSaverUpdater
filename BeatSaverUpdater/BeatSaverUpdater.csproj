@@ -125,6 +125,16 @@
 	  <None Remove="UI\PopupModal.bsml" />
 	</ItemGroup>
 
+	<!-- Excluded as of the 1.45.1 port: PlaylistMigrator is an optional integration with
+	     BeatSaberPlaylistsLib (only bound if that mod is installed, see Plugin.cs), and
+	     BeatSaberPlaylistsLib needs its own separate port to Beat Saber's overhauled
+	     IPreviewBeatmapLevel/IBeatmapLevelCollection interfaces, out of scope here since
+	     it's not needed for core update-checking functionality. Re-add once
+	     BeatSaberPlaylistsLib is ported. -->
+	<ItemGroup>
+	  <Compile Remove="Migration\PlaylistMigrator.cs" />
+	</ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="BeatSaberModdingTools.Tasks" Version="1.4.3">
 			<PrivateAssets>all</PrivateAssets>
